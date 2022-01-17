@@ -1,0 +1,191 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  color: white;
+  background: rgb(161, 161, 161);
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+small {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: small;
+}
+small a {
+  color: tomato;
+}
+.cityName {
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+  font-size: 7rem;
+  letter-spacing: 2px;
+  line-height: 80px;
+}
+
+.line-shadow {
+  box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
+  border-bottom: #ffff 1px solid;
+}
+a,
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.popular-cities,
+.popular-cities a {
+  font-family: "Dosis", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: white;
+  transition: all 300ms ease-in-out;
+  text-transform: uppercase;
+}
+
+.popular-cities a:hover {
+  color: white;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-decoration: none;
+  letter-spacing: 4px;
+}
+
+.popular-cities span {
+  margin-right: 5px;
+  padding-right: 25px;
+}
+
+#panel {
+  max-width: 768px;
+  max-height: 950px;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 30px auto;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.lightClass {
+  background-color: #ffac81;
+  background: linear-gradient(360deg, #ffac81 0%, #ff928b 74%);
+}
+
+.darkClass {
+  background: linear-gradient(
+    65.5deg,
+    rgb(23, 205, 205) -15.1%,
+    rgb(23, 25, 95) 71.5%
+  );
+}
+.medClass {
+  background: linear-gradient(-225deg, #a8bfff 0%, #884d80 100%);
+}
+
+.location-btn {
+  font-size: 3.5rem;
+  padding-left: 15px;
+  padding-top: 10px;
+  color: white;
+  transition: all 300ms ease-in-out;
+}
+
+.location-btn:hover {
+  font-size: 3.75em;
+  color: grey;
+}
+
+.btn {
+  width: 95px;
+  transition: all 300ms ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btn:hover {
+  background: grey;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.searchCopy {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300;
+  font-size: 1.8rem;
+  color: grey;
+  border: 0px;
+  height: 50px;
+}
+
+.dayNight,
+.dayNight a {
+  margin-left: 4px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300;
+  line-height: 18px;
+  max-width: 100px;
+  padding: 0 10px 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.dayNight a:hover {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+}
+
+.toggle {
+  margin-left: 15px;
+  padding-top: 7px;
+}
+
+#searchToggle {
+  max-height: 75px;
+  padding: 20px 0 60px 0;
+}
+
+#temperature-icon-description {
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.icon {
+  float: right;
+  height: 250px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(78%) saturate(31%)
+    hue-rotate(130deg) brightness(107%) contrast(107%);
+}
+.iconBackground {
+  will-change: transform;
+  transition: 500ms ease-in;
+}
+.icon:hover .iconBackground {
+  transform: scale(1.05);
+  transition: 500ms ease-in;
+}
+
+.border-dates {
+  border-right: #ffff 1px solid;
+  box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.3);
+}
+
+.form-control-md {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.form-control-md:hover {
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
