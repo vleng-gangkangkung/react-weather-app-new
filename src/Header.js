@@ -1,5 +1,4 @@
 import React from "react";
-import Location from "./components/Location";
 import Search from "./components/Search";
 import ToggleBg from "./components/ToggleBg";
 import "./styles.css";
