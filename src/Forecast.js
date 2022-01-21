@@ -10,7 +10,7 @@ export default function Forecast() {
         <div className=" forecastHeading mt-5 ml-3">
           FORECAST FOR THE WEEK
           <span
-            class="forecastCelcius"
+            className="forecastCelcius"
             title="Temperature displayed in &#176;Celcius"
           >
             &#176;C

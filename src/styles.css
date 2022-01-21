@@ -150,11 +150,6 @@ a:hover {
   padding-top: 7px;
 }
 
-#searchToggle {
-  max-height: 75px;
-  padding: 20px 0 60px 0;
-}
-
 #temperature-icon-description {
   padding-bottom: 30px;
   margin-bottom: 20px;
@@ -177,6 +172,7 @@ a:hover {
 
 .border-dates {
   border-right: #ffff 1px solid;
+  max-width: 160px;
   box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.3);
 }
 

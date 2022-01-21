@@ -1,6 +1,5 @@
-import React from "react";
-import Location from "./Location";
-import "../styles.css";
+import React, { useState } from "react";
+import "./styles.css";
 
 export default function Search() {
   return (
@@ -10,9 +9,8 @@ export default function Search() {
           <div className="col-md-9">
             <div className="form-group">
               <input
-                type="text"
+                type="search"
                 className="form-control form-control-md searchCopy pl-4"
-                placeholder="Search city or use your current location"
               />
             </div>
           </div>
@@ -22,8 +20,16 @@ export default function Search() {
               <input type="submit" value="search" className="searchCopy btn" />
             </div>
           </div>
+
+          {/* Use current location */}
+
           <div className="col-1 pl-3 ">
-            <Location />
+            <a href="/" title="Use your current location">
+              <i
+                className="fas fa-location-arrow location-btn"
+                id="current-location"
+              ></i>
+            </a>
           </div>
         </div>
       </form>

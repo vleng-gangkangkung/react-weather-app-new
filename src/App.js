@@ -5,7 +5,7 @@ import Icon from "./Icon";
 import Temperature from "./Temperature";
 import Description from "./Description";
 import MoreInfo from "./MoreInfo";
-import Forecast from "./Forecast.js";
+import Forecast from "./Forecast";
 import Footer from "./Footer";
 
 import "./styles.css";
@@ -26,13 +26,15 @@ export default function App() {
 
   return (
     <div className="App">
-      <div class="container">
-        <div id="panel" class="lightClass">
+      <div className="container">
+        <div id="panel" className="lightClass">
           <div className="row">
             <div className="col-md-10">
               <Cities />
             </div>
           </div>
+
+          {/* Search/Current Location/Toggle Bg */}
           <Header />
 
           <div className="cityName mb-3 mt-4">

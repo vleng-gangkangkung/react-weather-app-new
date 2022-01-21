@@ -7,13 +7,13 @@ export default function Temperature(props) {
     <div className="Temperature">
       <div className="temp mt-3">
         <span id="main-temp-display">{props.mainTemp}</span>
-        <span class="degreeSymbol">&#176;</span>
-        <span id="celcius" class="mainUnit" title="Convert to Celcius">
+        <span className="degreeSymbol">&#176;</span>
+        <span id="celcius" className="mainUnit" title="Convert to Celcius">
           <a href="/">C</a>
         </span>
         <span
           id="fahrenheit"
-          class="secondaryUnit"
+          className="secondaryUnit"
           title="Convert to Fahrenheit"
         >
           <a href="/">F</a>

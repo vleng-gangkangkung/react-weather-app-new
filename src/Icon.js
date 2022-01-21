@@ -5,7 +5,7 @@ export default function Icon() {
   return (
     <div>
       <div className="Icon">
-        <img src="images/01d.svg" alt="icon" class="icon iconBackground" />
+        <img src="images/01d.svg" alt="icon" className="icon iconBackground" />
       </div>
     </div>
   );
