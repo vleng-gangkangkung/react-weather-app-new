@@ -14,7 +14,7 @@ export default function App() {
   let weatherData = {
     city: "New York",
     temperature: 19,
-    day: "Tuesday",
+    day: "Thurs",
     time: "10:00",
     date: "29 December",
     description: "Broken clouds",
@@ -41,7 +41,7 @@ export default function App() {
             {weatherData.city.toUpperCase()}
           </div>
           <div className="row line-shadow pb-2">
-            <div className="col-md-7">
+            <div className="col-md-8">
               <Temperature mainTemp={weatherData.temperature} />
               <Description description={weatherData.description} />
               <MoreInfo
@@ -53,7 +53,7 @@ export default function App() {
                 realFeel={weatherData.realFeel}
               />
             </div>
-            <div className="col-md-5 mt-3">
+            <div className="col-md-4 mt-3">
               <Icon />
             </div>
           </div>
