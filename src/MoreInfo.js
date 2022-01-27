@@ -1,4 +1,5 @@
 import React from "react";
+import FormattedDate from "./components/FormattedDate";
 
 import "./styles.css";
 export default function MoreInfo(props) {
@@ -9,9 +10,7 @@ export default function MoreInfo(props) {
           <div className="border-dates">
             <strong>Last updated</strong>
             <br />
-            <span>{props.day}</span>, <span>{props.time}</span>
-            <br />
-            <span>{props.date}</span>
+            <FormattedDate date={props.date} />
           </div>
         </div>
 

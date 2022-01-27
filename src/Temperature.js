@@ -6,7 +6,7 @@ export default function Temperature(props) {
   return (
     <div className="Temperature">
       <div className="temp mt-3">
-        <span id="main-temp-display">{props.mainTemp}</span>
+        <span id="main-temp-display">{Math.round(props.mainTemp)}</span>
         <span className="degreeSymbol">&#176;</span>
         <span id="celcius" className="mainUnit" title="Convert to Celcius">
           <a href="/">C</a>
