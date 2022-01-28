@@ -1,18 +1,16 @@
 import React, { useState } from "react";
 
 import Cities from "./Cities";
-import Icon from "./Icon";
-import Temperature from "./Temperature";
-import Description from "./Description";
-import MoreInfo from "./MoreInfo";
 import Forecast from "./Forecast";
-import Footer from "./Footer";
 import ToggleBg from "./components/ToggleBg";
 import axios from "axios";
+import WeatherInfo from "./WeatherInfo";
 import "./styles.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+
+  let [query, setQuery] = useState(props.defaultCity);
 
   function handleResponse(response) {
     console.log(response.data);
@@ -24,14 +22,29 @@ export default function Weather(props) {
       date: response.data.dt * 1000,
       day: "Thurs",
       time: "10:00",
-      // date: "29 December",
       description: response.data.weather[0].description,
       imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       realFeel: response.data.main.feels_like,
-      icon: response.data.weather[0].icon,
+      icon: `images/${response.data.weather[0].icon}.svg`,
     });
+  }
+
+  function searchCity() {
+    // let city = "Sydney";
+    const apiKey = "7784a4cd4aa2e0c25ead7bd96d585b8a";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+    console.log(apiUrl);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    searchCity();
+  }
+  function getQuery(event) {
+    setQuery(event.target.value);
   }
 
   if (weatherData.ready) {
@@ -47,11 +60,12 @@ export default function Weather(props) {
             {/* ------------SEARCH BAR--------- */}
             <div className="row mt-4">
               <div className="col-10">
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div className="form-row">
                     <div className="col-md-9">
                       <div className="form-group">
                         <input
+                          onChange={getQuery}
                           type="search"
                           className="form-control form-control-md searchCopy pl-4"
                         />
@@ -85,28 +99,7 @@ export default function Weather(props) {
                 <ToggleBg />
               </div>
             </div>
-            {/* ------------WEATHER DATA--------- */}
-            <div className="cityName mb-3 mt-4">
-              {weatherData.city.toUpperCase()}
-            </div>
-            <div className="row line-shadow pb-2">
-              <div className="col-md-8">
-                <Temperature mainTemp={weatherData.temperature} />
-                <Description description={weatherData.description} />
-                <MoreInfo
-                  date={weatherData.date}
-                  // day={weatherData.day.getDay()}
-                  // date={weatherData.date.getDate()}
-                  // time={weatherData.time}
-                  humidity={weatherData.humidity}
-                  windSpeed={weatherData.wind}
-                  realFeel={weatherData.realFeel}
-                />
-              </div>
-              <div className="col-md-4 mt-3">
-                <Icon weatherIcon={weatherData.icon} />
-              </div>
-            </div>
+            <WeatherInfo data={weatherData} />
 
             {/* ------------FORECAST SECTION--------- */}
             <Forecast />
@@ -115,12 +108,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    // let city = "Sydney";
-    const apiKey = "7784a4cd4aa2e0c25ead7bd96d585b8a";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-    console.log(apiUrl);
-
+    searchCity();
     return "loading weather...";
   }
 }
