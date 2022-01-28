@@ -3,6 +3,7 @@ import Weather from "./Weather";
 import Footer from "./Footer";
 
 import "./styles.css";
+import Cities from "./Cities";
 
 export default function App() {
   return (

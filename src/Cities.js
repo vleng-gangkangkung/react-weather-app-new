@@ -1,8 +1,7 @@
 import React from "react";
 
 import "./styles.css";
-
-export default function Cities() {
+export default function Cities(props) {
   return (
     <div className="Cities">
       <div className="popular-cities">

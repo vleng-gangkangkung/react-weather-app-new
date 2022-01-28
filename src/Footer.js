@@ -9,7 +9,7 @@ export default function Footer() {
         Coded and designed by
         <a href="https://vleng.co.uk">&nbsp;Vanessa Leng&nbsp;</a>|
         <a
-          href="https://github.com/vleng-gangkangkung/my-weather-app"
+          href="https://github.com/vleng-gangkangkung/react-weather-app-new"
           title="View on Github"
         >
           &nbsp;Open Source Code
