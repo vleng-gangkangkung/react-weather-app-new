@@ -32,7 +32,7 @@ export default function Icon(props) {
         <ReactAnimatedWeather
           icon={iconsMapped[props.weatherIcon]}
           color="white"
-          size={250}
+          size={props.size}
           animate={true}
         />
         {/* <img src={imageUrl} alt="icon" className="icon iconBackground" /> */}
