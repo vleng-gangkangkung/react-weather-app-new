@@ -19,7 +19,7 @@ export default function WeatherInfo(props) {
             realFeel={props.data.realFeel}
           />
         </div>
-        <div className="col-md-4 mt-3">
+        <div className="col-md-4 mt-3 icon">
           <Icon weatherIcon={props.data.icon} size={250} />
         </div>
       </div>

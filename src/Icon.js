@@ -28,7 +28,7 @@ export default function Icon(props) {
 
   return (
     <div>
-      <div className="Icon icon iconBackground">
+      <div className="Icon icon ">
         <ReactAnimatedWeather
           icon={iconsMapped[props.weatherIcon]}
           color="white"

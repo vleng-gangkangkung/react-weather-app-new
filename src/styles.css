@@ -156,15 +156,7 @@ a:hover {
 
 .icon {
   float: right;
-  margin-right: 25px;
-}
-.iconBackground {
-  will-change: transform;
-  transition: 500ms ease-in;
-}
-.icon:hover .iconBackground {
-  transform: scale(1.05);
-  transition: 500ms ease-in;
+  padding-right: 10px;
 }
 
 .border-dates {
