@@ -5,9 +5,11 @@ import axios from "axios";
 
 export default function Forecast(props) {
   let [loaded, setLoaded] = useState(false);
+  let [forecast, setForecast] = useState(null);
 
   function handleResponse(response) {
     console.log(response.data);
+    setForecast(response.data.daily);
   }
 
   if (loaded) {
