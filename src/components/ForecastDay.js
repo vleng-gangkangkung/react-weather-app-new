@@ -24,7 +24,7 @@ export default function ForecastDay(props) {
   console.log(date);
 
   return (
-    <div className="col forecast-dayDate">
+    <div className="forecast-dayDate">
       <div className="border-dates-forecast ">
         <div className="day">{daysMapped[day]}</div>
         <div>
