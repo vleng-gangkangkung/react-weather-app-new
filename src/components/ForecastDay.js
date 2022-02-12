@@ -21,7 +21,6 @@ export default function ForecastDay(props) {
   }
 
   let daysMapped = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
-  console.log(date);
 
   return (
     <div className="forecast-dayDate">

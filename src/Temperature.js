@@ -19,16 +19,12 @@ export default function Temperature(props) {
     return (
       <div className="Temperature">
         <div className="temp mt-3">
-          <span id="main-temp-display">{Math.round(props.mainTemp)}</span>
+          <span>{Math.round(props.mainTemp)}</span>
           <span className="degreeSymbol">&#176;</span>
-          <span id="celcius" className="mainUnit" title="Convert to Celcius">
+          <span className="mainUnit" title="Convert to Celcius">
             C
           </span>
-          <span
-            id="fahrenheit"
-            className="secondaryUnit"
-            title="Convert to Fahrenheit"
-          >
+          <span className="secondaryUnit" title="Convert to Fahrenheit">
             <a href="/" onClick={showFarenheit}>
               F
             </a>
@@ -42,20 +38,12 @@ export default function Temperature(props) {
         <div className="temp mt-3">
           <span>{Math.round((props.mainTemp * 9) / 5 + 32)}</span>
           <span className="degreeSymbol">&#176;</span>
-          <span
-            id="celcius"
-            className="secondaryUnit"
-            title="Convert to Celcius"
-          >
+          <span className="secondaryUnit" title="Convert to Celcius">
             <a href="/" onClick={showCelcius}>
               C
             </a>
           </span>
-          <span
-            id="fahrenheit"
-            className="mainUnit"
-            title="Convert to Fahrenheit"
-          >
+          <span className="mainUnit" title="Convert to Fahrenheit">
             F
           </span>
         </div>
