@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Forecast from "./Forecast";
-import ToggleBg from "./components/ToggleBg";
+
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import "./styles.css";
