@@ -1,7 +1,7 @@
 import React from "react";
 
 import "../styles.css";
-export default function ToggleBg() {
+export default function ToggleBg(props) {
   return (
     <div className="ToggleBg ps-4 ">
       <div className="dayNight line-shadow toggle pb-2">
@@ -11,7 +11,11 @@ export default function ToggleBg() {
       </div>
       <div className="dayNight">
         <div className="toggle">
-          <a href="/" title="Change to dark theme">
+          <a
+            href="/"
+            title="Change to dark theme"
+            onClick={() => props.handleToggle()}
+          >
             DARK
           </a>
         </div>

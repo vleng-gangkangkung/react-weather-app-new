@@ -7,6 +7,24 @@ import WeatherInfo from "./WeatherInfo";
 import "./styles.css";
 
 export default function Weather(props) {
+  let [bg, setBg] = useState("lightClass");
+
+  function changeClassDark(event) {
+    event.preventDefault();
+    changeDark();
+    function changeDark() {
+      setBg("darkClass");
+    }
+  }
+
+  function changeClassLight(event) {
+    event.preventDefault();
+    changeLight();
+    function changeLight() {
+      setBg("lightClass");
+    }
+  }
+
   const [weatherData, setWeatherData] = useState({ ready: false });
   let [query, setQuery] = useState(props.defaultCity);
 
@@ -75,7 +93,7 @@ export default function Weather(props) {
     return (
       <div className="App">
         <div className="container">
-          <div id="panel" className="lightClass">
+          <div id="panel" className={bg}>
             <div className="row">
               <div className="col-md-10">
                 <div className="popular-cities">
@@ -111,12 +129,12 @@ export default function Weather(props) {
                       <div className="form-group">
                         <input
                           onChange={getQuery}
+                          placeholder="Enter city name to view weather and forecast"
                           type="search"
                           className="form-control form-control-md searchCopy pl-4"
                         />
                       </div>
                     </div>
-
                     <div className="col-md-2">
                       <div className="form-group">
                         <input
@@ -125,12 +143,33 @@ export default function Weather(props) {
                           className="searchCopy btn btn-light"
                         />
                       </div>
-                    </div>
+                    </div>{" "}
                   </div>
                 </form>
               </div>
               <div className="col-2 ">
-                <ToggleBg />
+                <div className="ToggleBg ps-4 ">
+                  <div className="dayNight line-shadow toggle pb-2">
+                    <a
+                      href="/"
+                      title="Change to light theme"
+                      onClick={changeClassLight}
+                    >
+                      <span>LIGHT</span>
+                    </a>
+                  </div>
+                  <div className="dayNight">
+                    <div className="toggle">
+                      <a
+                        href="/"
+                        title="Change to dark theme"
+                        onClick={changeClassDark}
+                      >
+                        DARK
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <WeatherInfo data={weatherData} />
