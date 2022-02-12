@@ -3,8 +3,6 @@ import ReactAnimatedWeather from "react-animated-weather";
 
 import "./styles.css";
 export default function Icon(props) {
-  // let imageUrl = `images/${props.weatherIcon}.svg`;
-
   const iconsMapped = {
     "01d": "CLEAR_DAY",
     "01n": "CLEAR_NIGHT",
@@ -35,7 +33,6 @@ export default function Icon(props) {
           size={props.size}
           animate={true}
         />
-        {/* <img src={imageUrl} alt="icon" className="icon iconBackground" /> */}
       </div>
     </div>
   );

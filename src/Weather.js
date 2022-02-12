@@ -138,15 +138,15 @@ export default function Weather(props) {
                         <input
                           type="submit"
                           value="search"
-                          className="searchCopy btn btn-light"
+                          className="searchCopy btn me-5"
                         />
                       </div>
-                    </div>{" "}
+                    </div>
                   </div>
                 </form>
               </div>
               <div className="col-2 ">
-                <div className="ToggleBg ps-4 ">
+                <div className="ToggleBg ps-4 ms-5 ">
                   <div className="dayNight line-shadow toggle pb-2">
                     <a
                       href="/"

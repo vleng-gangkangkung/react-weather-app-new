@@ -5,7 +5,7 @@ import "./styles.css";
 export default function MoreInfo(props) {
   return (
     <div>
-      <div className="row weather-description mt-5 mb-5">
+      <div className="row weather-description mt-4 mb-5">
         <div className="col-6">
           <div className="border-dates">
             <strong>Last updated</strong>
