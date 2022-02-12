@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import Forecast from "./Forecast";
 
 import axios from "axios";
@@ -7,26 +6,9 @@ import WeatherInfo from "./WeatherInfo";
 import "./styles.css";
 
 export default function Weather(props) {
-  let [bg, setBg] = useState("lightClass");
-
-  function changeClassDark(event) {
-    event.preventDefault();
-    changeDark();
-    function changeDark() {
-      setBg("darkClass");
-    }
-  }
-
-  function changeClassLight(event) {
-    event.preventDefault();
-    changeLight();
-    function changeLight() {
-      setBg("lightClass");
-    }
-  }
-
   const [weatherData, setWeatherData] = useState({ ready: false });
   let [query, setQuery] = useState(props.defaultCity);
+  let [bg, setBg] = useState("lightClass");
 
   function handleResponse(response) {
     setWeatherData({
@@ -87,6 +69,22 @@ export default function Weather(props) {
 
   function getQuery(event) {
     setQuery(event.target.value);
+  }
+
+  function changeClassDark(event) {
+    event.preventDefault();
+    changeDark();
+    function changeDark() {
+      setBg("darkClass");
+    }
+  }
+
+  function changeClassLight(event) {
+    event.preventDefault();
+    changeLight();
+    function changeLight() {
+      setBg("lightClass");
+    }
   }
 
   if (weatherData.ready) {

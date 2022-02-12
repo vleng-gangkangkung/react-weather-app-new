@@ -16,8 +16,8 @@ export default function MoreInfo(props) {
 
         <div className="col-6  description">
           <div>Humidity: {props.humidity}%</div>
-          <div>Windspeed: {props.windSpeed}mph</div>
-          <div>Feels like: {props.realFeel}&#176;C</div>
+          <div>Windspeed: {Math.round(props.windSpeed)}mph</div>
+          <div>Feels like: {Math.round(props.realFeel)}&#176;C</div>
         </div>
       </div>
     </div>
